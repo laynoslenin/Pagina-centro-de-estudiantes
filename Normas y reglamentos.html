@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normas y Reglamentos - CED USFX</title>
+
+<!-- Iconos de redes sociales (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    /* Encabezado */
+    header {
+        background-color: #004d26;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    header img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    /* Barra de navegación */
+    nav {
+        background-color: #389c40;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #2e8b57;
+    }
+    /* Contenido principal */
+    main {
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Pie de página */
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 25px 10px;
+        margin-top: 30px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.8rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #2e8b57;
+    }
+    
+    /* Estilos para organigramas */
+    .organigrama-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 40px 0;
+    }
+    .organigrama-box {
+        flex: 1;
+        min-width: 300px;
+    }
+    .organigrama-title {
+        text-align: center;
+        color: #004d26;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #004d26;
+    }
+    .nivel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .nodo {
+        background-color: #004d26;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 80%;
+        max-width: 250px;
+        position: relative;
+    }
+    .nodo.cub {
+        background-color: #1a5276;
+    }
+    .nodo.estudiantil {
+        background-color: #2e8b57;
+    }
+    .nodo.docente {
+        background-color: #7d6608;
+    }
+    .nodo.reglamento {
+        background-color: #5cb85c;
+    }
+    .nodo.hcu {
+        background-color: #6c3483;
+    }
+    .nodo.hcf {
+        background-color: #2874a6;
+    }
+    .nodo.consejo {
+        background-color: #1e8449;
+    }
+    .conector {
+        height: 30px;
+        width: 2px;
+        background-color: #004d26;
+        margin-bottom: 10px;
+    }
+    .conector-horizontal {
+        height: 2px;
+        width: 80%;
+        background-color: #004d26;
+        margin: 10px 0;
+    }
+    .nivel-horizontal {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    /* Estilos para documentos */
+    .documentos {
+        margin-top: 40px;
+    }
+    .documento {
+        border-left: 4px solid #004d26;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        border-radius: 0 8px 8px 0;
+    }
+    .documento h3 {
+        color: #004d26;
+        margin-top: 0;
+    }
+    .documento a {
+        display: inline-block;
+        background-color: #004d26;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+    .documento a:hover {
+        background-color: #2e8b57;
+    }
+    
+    /* Estilos para representantes */
+    .representantes {
+        margin-top: 30px;
+    }
+    .representante-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: white;
+    }
+    .representante-card h4 {
+        margin-top: 0;
+        color: #004d26;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    .representante-info {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    .representante-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #004d26;
+    }
+    
+    /* Estilos para mecanismos de decisión */
+    .mecanismos-detalle {
+        margin-top: 40px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+    .mecanismo {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .mecanismo:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .mecanismo h3 {
+        color: #004d26;
+        margin-top: 0;
+    }
+    .mecanismo-atribuciones {
+        background-color: white;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 10px;
+        border-left: 3px solid #004d26;
+    }
+    .mecanismo-representantes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .representante-count {
+        background-color: #004d26;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    
+    /* Estilos para la gaceta */
+    .gaceta {
+        margin-top: 40px;
+    }
+    .gaceta-header {
+        background-color: #004d26;
+        color: white;
+        padding: 15px;
+        border-radius: 8px 8px 0 0;
+        text-align: center;
+    }
+    .gaceta-subheader {
+        background-color: #2e8b57;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .gaceta-body {
+        border: 1px solid #ddd;
+        border-top: none;
+        padding: 20px;
+        border-radius: 0 0 8px 8px;
+    }
+    .gaceta-instancia {
+        margin-bottom: 40px;
+    }
+    .gaceta-instancia h2 {
+        color: #004d26;
+        border-bottom: 2px solid #004d26;
+        padding-bottom: 5px;
+    }
+    .gaceta-resolucion {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .gaceta-resolucion:last-child {
+        border-bottom: none;
+    }
+    .gaceta-numero {
+        font-weight: bold;
+        color: #004d26;
+        font-size: 1.1rem;
+    }
+    .gaceta-fecha {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .gaceta-contenido {
+        margin-top: 15px;
+    }
+    .gaceta-articulo {
+        margin-bottom: 15px;
+    }
+    .gaceta-punto {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 20px;
+    }
+    .gaceta-punto:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #004d26;
+        font-weight: bold;
+    }
+    .gaceta-voto {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 0.8rem;
+    }
+    .voto-aprobado {
+        background-color: #d4edda;
+        color: #155724;
+    }
+    .voto-rechazado {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+    .voto-abstencion {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    .gaceta-firma {
+        text-align: right;
+        font-style: italic;
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px dashed #ccc;
+    }
+    .gaceta-archivo {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .gaceta-archivo a {
+        color: #004d26;
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid #004d26;
+        padding: 5px 15px;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    .gaceta-archivo a:hover {
+        background-color: #004d26;
+        color: white;
+    }
+    .gaceta-representantes {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 15px;
+        border-left: 3px solid #004d26;
+    }
+    .gaceta-representantes h4 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .representante-voto {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .filtros-gaceta {
+        background-color: #f0f7e6;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .filtro-btn {
+        padding: 8px 15px;
+        border: 1px solid #004d26;
+        background-color: white;
+        color: #004d26;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .filtro-btn:hover, .filtro-btn.activo {
+        background-color: #004d26;
+        color: white;
+    }
+    
+    /* Estilos para resoluciones */
+    .resoluciones {
+        margin-top: 30px;
+    }
+    .resolucion-item {
+        background-color: #f0f7e6;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #004d26;
+    }
+    .resolucion-item h4 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .resolucion-meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .voto-estudiantil {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpeg" alt="Logo CED UNIR">
+    <div>
+        <h1>Centro de Estudiantes de Derecho - UNIR</h1>
+        <p>Universitarios con Nuevas Ideas de Reforma</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Nuestro centro.html">Nuestro Centro</a>
+    <a href="Normas y reglamentos.html">Normas y Reglamentos</a>
+    <a href="Noticias y avisos.html">Noticias y Avisos</a>
+    <a href="Horarios y atenciones.html">Horarios y Atenciones</a>
+    <a href="Recursos academicos.html">Recursos Académicos</a>
+    <a href="becas y beneficios.html">Becas y Beneficios</a>
+    <a href="Canal de denuncias.html">Canal de Denuncias</a>
+</nav>
+
+<main>
+    <h2>Normas y Reglamentos</h2>
+    <p>En esta sección encontrarás toda la normativa que rige nuestra vida universitaria, desde los estatutos generales hasta los reglamentos específicos de los estudiantes.</p>
+    
+    <div class="organigrama-container">
+        <!-- Organigrama Normativo -->
+        <div class="organigrama-box">
+            <h3 class="organigrama-title">Organigrama Normativo</h3>
+            <div class="nivel">
+                <div class="nodo cub">Estatuto de la CUB</div>
+                <div class="conector"></div>
+            </div>
+            <div class="nivel">
+                <div class="nodo">Estatuto Orgánico USFX</div>
+                <div class="conector"></div>
+            </div>
+            <div class="nivel-horizontal">
+                <div class="nivel">
+                    <div class="nodo estudiantil">Estatuto Estudiantil</div>
+                    <div class="conector"></div>
+                    <div class="nodo reglamento">Reglamento Interno CED</div>
+                </div>
+                <div class="nivel">
+                    <div class="nodo docente">Estatuto Docente</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Organigrama de Mecanismos de Decisión -->
+        <div class="organigrama-box">
+            <h3 class="organigrama-title">Mecanismos de Decisión</h3>
+            <div class="nivel">
+                <div class="nodo hcu">Honorable Consejo Universitario</div>
+                <div class="conector"></div>
+            </div>
+            <div class="nivel">
+                <div class="nodo hcf">Honorable Consejo Facultativo</div>
+                <div class="conector"></div>
+            </div>
+            <div class="nivel">
+                <div class="nodo consejo">Consejo de Carrera</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Detalle de mecanismos de decisión -->
+    <div class="mecanismos-detalle">
+        <h2>Mecanismos de Decisión Universitaria</h2>
+        <p>Descripción detallada de las instancias de gobierno universitario donde participan los representantes estudiantiles:</p>
+        
+        <div class="mecanismo">
+            <h3>Honorable Consejo Universitario (HCU)</h3>
+            <div class="mecanismo-atribuciones">
+                <p><strong>¿Que es?</strong> Es la máxima autoridad de la Universidad entre Congreso y Congreso, es el H. Consejo Universitario, presidido por el Rector o Vicerrector y con representación paritaria de docentes y estudiantes.   Se regirá en su actuación por un reglamento propio.</p>
+            </div>
+            <div class="mecanismo-representantes">
+                <div class="representante-count">
+                    <i class="fas fa-users"></i> Representante estudiantil: 1 (titular)
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-user-plus"></i> Suplente: 1
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-vote-yea"></i> Voto: Decisivo en asuntos estudiantiles
+                </div>
+            </div>
+        </div>
+        
+        <div class="mecanismo">
+            <h3>Honorable Consejo Facultativo (HCF)</h3>
+            <div class="mecanismo-atribuciones">
+                <p><strong>¿En que consiste?</strong> Cada facultad tendrá un H. Consejo Facultativo, compuesto por el decano, que será su presidente; por los directores de carreras, por un delegado docente por cada una de ellas y por igual número de  representantes estudiantes, excluyendo de la paridad al decano.</p>
+            </div>
+            <div class="mecanismo-representantes">
+                <div class="representante-count">
+                    <i class="fas fa-users"></i> Representantes estudiantiles: 2 (titulares)
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-user-plus"></i> Suplentes: 2
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-vote-yea"></i> Voto: Decisivo en asuntos académicos
+                </div>
+            </div>
+        </div>
+        
+        <div class="mecanismo">
+            <h3>Consejo de Carrera</h3>
+            <div class="mecanismo-atribuciones">
+                <p><strong>¿En que consiste?</strong> Los  Consejos  de  Carrera  son  organismos  de  gobierno  de  carácter resolutivo de la carrera, que planifican su desarrollo, resuelven sus problemas y  definen  las  acciones  pertinentes  a  la  misma.  Están  constituidos  por  el director de la carrera que lo preside, un miembro como secretario del consejo de carrera, y una delegación docente estudiantil paritaria.</p>
+            </div>
+            <div class="mecanismo-representantes">
+                <div class="representante-count">
+                    <i class="fas fa-users"></i> Representantes estudiantiles: 5 (titulares)
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-user-plus"></i> Suplentes: 5
+                </div>
+                <div class="representante-count">
+                    <i class="fas fa-vote-yea"></i> Voto: Decisivo en todos los asuntos
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Representantes en instancias de co-gobierno -->
+    <div class="representantes">
+        <h3>Representantes Estudiantiles en Instancias de Co-Gobierno</h3>
+        
+        <div class="representante-card">
+            <h4>Honorable Consejo Universitario</h4>
+            <div class="representante-info">
+                <img src="img/representante-hcu.jpg" alt="Representante HCU" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Flores Terrazas laynos Lenin</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Laynosflores08@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="representante-card">
+            <h4>Honorable Consejo Facultativo</h4>
+            <div class="representante-info">
+                <img src="img/representante-hcf1.jpg" alt="Representante HCF" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Flores Terrazas laynos Lenin</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Laynosflores08@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+            <div class="representante-info" style="margin-top: 15px;">
+                <img src="img/representante-hcf2.jpg" alt="Representante HCF" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Sanchez Rodríguez Ivan</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> ivan@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="representante-card">
+            <h4>Consejo de Carrera</h4>
+            <div class="representante-info">
+                <img src="img/representante-cc1.jpg" alt="Representante Consejo" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Sanchez Rodríguez Ivan</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> ivan@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+            <div class="representante-info" style="margin-top: 15px;">
+                <img src="img/representante-cc2.jpg" alt="Representante Consejo" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Canizares Moscoso Denilson Raul</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Denil@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+            <div class="representante-info" style="margin-top: 15px;">
+                <img src="img/representante-cc3.jpg" alt="Representante Consejo" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Flores Terrazas laynos Lenin</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Laynosflores08@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+            <div class="representante-info" style="margin-top: 15px;">
+                <img src="img/representante-cc2.jpg" alt="Representante Consejo" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Canizares Moscoso Denilson Raul</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Denil@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+            <div class="representante-info" style="margin-top: 15px;">
+                <img src="img/representante-cc2.jpg" alt="Representante Consejo" class="representante-img">
+                <div>
+                    <p><strong>Nombre:</strong> Canizares Moscoso Denilson Raul</p>
+                    <p><strong>Cargo:</strong> Delegado titular</p>
+                    <p><strong>Contacto:</strong> Denil@gmail.com</p>
+                    <p><strong>Periodo:</strong> 2024-2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gaceta de resoluciones integrada -->
+    <div class="gaceta">
+        <div class="gaceta-header">
+            <h2>Gaceta Oficial de Resoluciones</h2>
+        </div>
+        <div class="gaceta-subheader">
+            Registro completo de todas las resoluciones con el detalle de los votos de nuestros representantes
+        </div>
+        <div class="gaceta-body">
+            <div class="filtros-gaceta">
+                <button class="filtro-btn activo" onclick="filtrarResoluciones('todas')">Todas las resoluciones</button>
+                <button class="filtro-btn" onclick="filtrarResoluciones('hcu')">HCU</button>
+                <button class="filtro-btn" onclick="filtrarResoluciones('hcf')">HCF</button>
+                <button class="filtro-btn" onclick="filtrarResoluciones('consejo')">Consejo de Carrera</button>
+            </div>
+            
+            <!-- Sección Honorable Consejo Universitario -->
+            <div class="gaceta-instancia" id="hcu">
+                <h2>Honorable Consejo Universitario</h2>
+                
+                <!-- Resolución 1 HCU -->
+                <div class="gaceta-resolucion">
+                    <div class="gaceta-numero">Resolución HCU N° 124/2024</div>
+                    <div class="gaceta-fecha">Aprobada en sesión ordinaria del 10 de mayo de 2024 - Publicada el 15/05/2024</div>
+                    <div class="gaceta-contenido">
+                        <div class="gaceta-articulo">
+                            <div class="gaceta-punto">
+                                <strong>Artículo 1°:</strong> Aprobar la modificación al artículo 42 del Reglamento Académico referente a la programación de exámenes parciales.
+                                <span class="gaceta-voto voto-aprobado">Aprobado</span>
+                            </div>
+                            <div class="gaceta-representantes">
+                                <h4>Voto de los representantes estudiantiles:</h4>
+                                <div class="representante-voto"><span>Laynos Lenin Flores Terrazas:</span> <strong class="voto-aprobado">A favor</strong></div>
+                            </div>
+                        </div>
+                        
+                        <div class="gaceta-articulo">
+                            <div class="gaceta-punto">
+                                <strong>Artículo 2°:</strong> Derogar las disposiciones contrarias a la presente resolución.
+                                <span class="gaceta-voto voto-aprobado">Aprobado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaceta-firma">
+                        <p>Por el Honorable Consejo Universitario</p>
+                        <p><strong>Iván Arandia Ledezma</strong><br>Secretario General HCU</p>
+                    </div>
+                    <div class="gaceta-archivo">
+                        <a href="resoluciones/hcu_124_2024.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Descargar resolución completa</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección Honorable Consejo Facultativo -->
+            <div class="gaceta-instancia" id="hcf">
+                <h2>Honorable Consejo Facultativo</h2>
+                
+                <!-- Resolución 1 HCF -->
+                <div class="gaceta-resolucion">
+                    <div class="gaceta-numero">Resolución HCF N° 056/2024</div>
+                    <div class="gaceta-fecha">Aprobada en sesión ordinaria del 5 de abril de 2024 - Publicada el 12/04/2024</div>
+                    <div class="gaceta-contenido">
+                        <div class="gaceta-articulo">
+                            <div class="gaceta-punto">
+                                <strong>Artículo 1°:</strong> Aprobar el presupuesto anual de la Facultad de Derecho con incremento del 15% para adquisición de material bibliográfico.
+                                <span class="gaceta-voto voto-aprobado">Aprobado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="gaceta-articulo">
+                            <div class="gaceta-punto">
+                                <strong>Artículo 2°:</strong> Autorizar la conformación de una comisión estudiantil para supervisar la ejecución del rubro bibliográfico.
+                                <span class="gaceta-voto voto-aprobado">Aprobado</span>
+                                <div class="gaceta-representantes">
+                                    <h4>Voto de los representantes estudiantiles:</h4>
+                                    <div class="representante-voto"><span>Flores Terrazas Laynos Lenin</span> <strong class="voto-aprobado">A favor</strong></div>
+                                    <div class="representante-voto"><span>Sanchez Rodríguez Ivan</span> <strong class="voto-aprobado">A favor</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaceta-firma">
+                        <p>Por el Honorable Consejo Facultativo</p>
+                        <p><strong>Univ. Alina</strong><br>Secretaria HCF</p>
+                    </div>
+                    <div class="gaceta-archivo">
+                        <a href="resoluciones/hcf_056_2024.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Descargar resolución completa</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección Consejo de Carrera -->
+            <div class="gaceta-instancia" id="consejo">
+                <h2>Consejo de Carrera de Derecho</h2>
+                
+                <!-- Resolución 1 Consejo -->
+                <div class="gaceta-resolucion">
+                    <div class="gaceta-numero">Acuerdo Consejo de Carrera N° 018/2024</div>
+                    <div class="gaceta-fecha">Aprobado en sesión ordinaria del 20 de marzo de 2024 - Publicado el 25/03/2024</div>
+                    <div class="gaceta-contenido">
+                        <div class="gaceta-articulo">
+                            <div class="gaceta-punto">
+                                <strong>Punto 1°:</strong> Rechazar la propuesta de reforma al Estatuto Estudiantil presentada por la comisión ad-hoc.
+                                <span class="gaceta-voto voto-rechazado">Rechazado 1-4</span>
+                                <div class="gaceta-representantes">
+                                    <h4>Voto de los representantes estudiantiles:</h4>
+                                    <div class="representante-voto"><span>Flores Terrazas Laynos Lenin</span> <strong class="voto-aprobado">A favor</strong></div>
+                                    <div class="representante-voto"><span>Sanchez Rodriguez Ivan</span> <strong class="voto-rechazado">En contra</strong></div>
+                                    <div class="representante-voto"><span>Canizares Moscoso Denilson Raul</span> <strong class="voto-rechazado">En contra</strong></div>
+                                    <div class="representante-voto"><span>Chapaco</span> <strong class="voto-rechazado">En contra</strong></div>
+                                    <div class="representante-voto"><span>Barja Trujillo William</span> <strong class="voto-rechazado">En contra</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gaceta-firma">
+                        <p>Por el Consejo de Carrera de Derecho</p>
+                        <p><strong>Msc. Magariños Eguez Freddy Alex</strong><br>Presidente Concejo de carrera</p>
+                    </div>
+                    <div class="gaceta-archivo">
+                        <a href="resoluciones/cc_018_2024.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Descargar acuerdo completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Documentos normativos -->
+    <div class="documentos">
+        <h3>Documentos Normativos</h3>
+        
+        <div class="documento">
+            <h3>Estatuto de la CUB</h3>
+            <p>Normativa que regula la organización y funcionamiento de la representación estudiantil a nivel nacional.</p>
+            <a href="documentos/estatuto_cub.pdf" target="_blank">Descargar</a>
+        </div>
+        
+        <div class="documento">
+            <h3>Estatuto Orgánico de la USFX</h3>
+            <p>Documento rector que establece la organización, gobierno y funcionamiento de la Universidad San Francisco Xavier de Chuquisaca.</p>
+            <a href="ESTATUTO-ORGANICO.docx" target="_blank">Descargar</a>
+        </div>
+        
+        <div class="documento">
+            <h3>Estatuto Orgánico Estudiantil</h3>
+            <p>Normas que regulan los derechos, deberes y organización del estamento estudiantil de la USFX.</p>
+            <a href="ESTATUTO ORGANICO ESTUDIANTIL UNIVERSIDAD MAYOR(1).docx" target="_blank">Descargar</a>
+        </div>
+        
+        <div class="documento">
+            <h3>Estatuto Docente</h3>
+            <p>Documento que regula los derechos, deberes y organización del estamento docente de la USFX.</p>
+            <a href="documentos/estatuto_docente.pdf" target="_blank">Descargar</a>
+        </div>
+        
+        <div class="documento">
+            <h3>Reglamento Interno del CED-UNIR</h3>
+            <p>Documento que establece la organización y funcionamiento del Centro de Estudiantes de Derecho - UNIR.</p>
+            <a href="REGLAMENTO INTERNO CENTRO.docx" target="_blank">Descargar</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Síguenos en nuestras redes sociales</p>
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/@unir_derecho_usfx?_t=ZM-8yimf7SNzJF&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AhHMANKfr/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/c.e.d_unir?igsh=MXVucjd4Z2ZuMmdlYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 CED UNIR - Facultad de Derecho USFX | Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function filtrarResoluciones(tipo) {
+        // Remover clase activa de todos los botones
+        document.querySelectorAll('.filtro-btn').forEach(btn => {
+            btn.classList.remove('activo');
+        });
+        
+        // Agregar clase activa al botón clickeado
+        event.target.classList.add('activo');
+        
+        // Mostrar/ocultar resoluciones según el filtro
+        const instancias = document.querySelectorAll('.gaceta-instancia');
+        
+        if (tipo === 'todas') {
+            instancias.forEach(instancia => {
+                instancia.style.display = 'block';
+            });
+        } else {
+            instancias.forEach(instancia => {
+                instancia.style.display = instancia.id === tipo ? 'block' : 'none';
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

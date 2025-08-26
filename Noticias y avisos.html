@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias y Avisos - CED UNIR Derecho USFX</title>
+
+<!-- Iconos de redes sociales (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    /* Encabezado */
+    header {
+        background-color: #004d26; /* Verde oscuro */
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    header img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    /* Barra de navegación */
+    nav {
+        background-color: #389c40; /* verde claro */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #2e8b57; /* Verde más claro */
+    }
+    /* Contenido principal */
+    main {
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Pie de página */
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #2e8b57;
+    }
+    
+    /* Estilos específicos para noticias */
+    .filtros {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+    .filtros button {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .filtros button:hover, .filtros button.activo {
+        background-color: #004d26;
+        color: white;
+        border-color: #004d26;
+    }
+    .noticia {
+        border-bottom: 1px solid #eee;
+        padding: 20px 0;
+        display: flex;
+        gap: 20px;
+    }
+    .noticia:last-child {
+        border-bottom: none;
+    }
+    .noticia-img {
+        min-width: 200px;
+        max-width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .noticia-contenido h3 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .noticia-meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .noticia-meta span {
+        margin-right: 15px;
+    }
+    .noticia-meta i {
+        margin-right: 5px;
+    }
+    .destacada {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #004d26;
+        margin-bottom: 30px;
+    }
+    .paginacion {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .paginacion a {
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        color: #333;
+        border-radius: 4px;
+    }
+    .paginacion a.activo {
+        background-color: #004d26;
+        color: white;
+        border-color: #004d26;
+    }
+    .avisos-urgentes {
+        background-color: #fff8e1;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 0 8px 8px 0;
+    }
+    .avisos-urgentes h3 {
+        margin-top: 0;
+        color: #d84315;
+    }
+    .aviso {
+        padding: 10px 0;
+        border-bottom: 1px dashed #ffc107;
+    }
+    .aviso:last-child {
+        border-bottom: none;
+    }
+    .aviso-fecha {
+        font-size: 0.8rem;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <!-- Logo a la izquierda -->
+    <img src="logo.jpeg" alt="Logo CED UNIR">
+    <div>
+        <h1>Centro de Estudiantes de Derecho - UNIR</h1>
+        <p>Universitarios con Nuevas Ideas de Reforma</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Nuestro centro.html">Nuestro Centro</a>
+    <a href="Normas y reglamentos.html">Normas y Reglamentos</a>
+    <a href="Noticias y avisos.html">Noticias y Avisos</a>
+    <a href="Horarios y atenciones.html">Horarios y Atenciones</a>
+    <a href="Recursos academicos.html">Recursos Académicos</a>
+    <a href="becas y beneficios.html">Becas y Beneficios</a>
+    <a href="Canal de denuncias.html">Canal de Denuncias</a>
+</nav>
+
+<main>
+    <h2>Noticias y Avisos</h2>
+    
+    <div class="avisos-urgentes">
+        <h3><i class="fas fa-exclamation-circle"></i> Avisos Urgentes</h3>
+        <div class="aviso">
+            <div class="aviso-fecha"><i class="far fa-calendar-alt"></i> 15/05/2025</div>
+            <p><strong>Suspensión de clases el viernes 17/05:</strong> Por asueto universitario, no habrá actividades académicas.</p>
+        </div>
+        <div class="aviso">
+            <div class="aviso-fecha"><i class="far fa-calendar-alt"></i> 14/05/2025</div>
+            <p><strong>Convocatoria a asamblea extraordinaria:</strong> Jueves 16/05 a las 16:00 en el aula magna.</p>
+        </div>
+    </div>
+    
+    <div class="filtros">
+        <button class="activo">Todas</button>
+        <button>Académicas</button>
+        <button>Eventos</button>
+        <button>Convocatorias</button>
+        <button>Beneficios</button>
+    </div>
+    
+    <div class="destacada">
+        <div class="noticia">
+            <img src="comeleciones.jpeg" alt="Elecciones estudiantiles" class="noticia-img">
+            <div class="noticia-contenido">
+                <h3>Convocatoria a elecciones del CED 2025-2026</h3>
+                <div class="noticia-meta">
+                    <span><i class="far fa-calendar-alt"></i> 10/05/2025</span>
+                    <span><i class="far fa-user"></i> Comité Electoral</span>
+                    <span><i class="fas fa-tag"></i> Convocatorias</span>
+                </div>
+                <p>Se abre el periodo de inscripción de listas para las elecciones del Centro de Estudiantes. El cronograma electoral incluye: inscripción de listas del 10 al 17 de mayo, campaña del 20 al 30 de mayo, y elecciones el 3 de junio.</p>
+                <a href="noticias/detalle-elecciones.html" style="color: #004d26; font-weight: bold;">Leer más →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="noticia">
+        <img src="comferialibro.jpeg" alt="Feria de libros" class="noticia-img">
+        <div class="noticia-contenido">
+            <h3>Gran feria de libros jurídicos con descuentos especiales</h3>
+            <div class="noticia-meta">
+                <span><i class="far fa-calendar-alt"></i> 08/05/2025</span>
+                <span><i class="far fa-user"></i> Secretaría de Bienestar</span>
+                <span><i class="fas fa-tag"></i> Beneficios</span>
+            </div>
+            <p>Del 20 al 24 de mayo se realizará en el patio central de la facultad una feria de libros jurídicos con descuentos de hasta el 40% para estudiantes. Participarán las principales editoriales especializadas.</p>
+            <a href="noticias/detalle-feria.html" style="color: #004d26; font-weight: bold;">Leer más →</a>
+        </div>
+    </div>
+    
+    <div class="noticia">
+        <img src="comargumentacionjuridica.jpeg" alt="Taller de argumentación" class="noticia-img">
+        <div class="noticia-contenido">
+            <h3>Taller gratuito de argumentación jurídica</h3>
+            <div class="noticia-meta">
+                <span><i class="far fa-calendar-alt"></i> 05/05/2025</span>
+                <span><i class="far fa-user"></i> Secretaría Académica</span>
+                <span><i class="fas fa-tag"></i> Académicas</span>
+            </div>
+            <p>El próximo miércoles 15 de mayo se realizará un taller práctico de argumentación jurídica dictado por el Dr. Juan Pérez, magistrado del Tribunal Departamental. Cupos limitados, inscripciones abiertas hasta el 12/05.</p>
+            <a href="noticias/detalle-taller.html" style="color: #004d26; font-weight: bold;">Leer más →</a>
+        </div>
+    </div>
+    
+    <div class="noticia">
+        <img src="comdonacion.jpeg" alt="Campaña de donación" class="noticia-img">
+        <div class="noticia-contenido">
+            <h3>Campaña de donación para biblioteca comunitaria</h3>
+            <div class="noticia-meta">
+                <span><i class="far fa-calendar-alt"></i> 02/05/2025</span>
+                <span><i class="far fa-user"></i> Secretaría de Cultura</span>
+                <span><i class="fas fa-tag"></i> Eventos</span>
+            </div>
+            <p>Estamos recolectando libros de texto, códigos y materiales de estudio en buen estado para crear una biblioteca comunitaria que beneficie a estudiantes de escasos recursos. Puntos de recepción en la oficina del CED.</p>
+            <a href="noticias/detalle-donacion.html" style="color: #004d26; font-weight: bold;">Leer más →</a>
+        </div>
+    </div>
+    
+    <div class="paginacion">
+        <a href="#" class="activo">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">→</a>
+    </div>
+</main>
+
+<footer>
+    <p>Síguenos en nuestras redes sociales</p>
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/@unir_derecho_usfx?_t=ZM-8yimf7SNzJF&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AhHMANKfr/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/c.e.d_unir?igsh=MXVucjd4Z2ZuMmdlYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 CED UNIR - Facultad de Derecho USFX | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

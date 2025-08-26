@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestro Centro - CED USFX</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    /* Encabezado */
+    header {
+        background-color: #004d26;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    header img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    /* Barra de navegación */
+    nav {
+        background-color: #389c40; /* verde claro */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #2e8b57; /* Verde más claro */
+    }
+    nav a:hover {
+        background-color: #2e8b57;
+    }
+    /* Contenido */
+    main {
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+        color: #004d26;
+    }
+    p {
+        text-align: justify;
+        line-height: 1.6;
+    }
+    /* Tabla de miembros */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #004d26;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    td {
+        padding: 8px;
+        vertical-align: top;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    details {
+        margin: 5px 0;
+    }
+    summary {
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+    }
+    /* Pie de página */
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 25px 10px;
+        margin-top: 30px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.8rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #2e8b57;
+    }
+</style>
+<header>
+    <img src="logo.jpeg" alt="Logo CED UNIR">
+    <div>
+        <h1>Centro de Estudiantes de Derecho - UNIR</h1>
+        <p>Universitarios con Nuevas Ideas de Reforma</p>
+    </div>
+</header>
+
+<!-- Barra de navegación añadida -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Nuestro centro.html">Nuestro Centro</a>
+    <a href="Normas y reglamentos.html">Normas y Reglamentos</a>
+    <a href="Noticias y avisos.html">Noticias y Avisos</a>
+    <a href="Horarios y atenciones.html">Horarios y Atenciones</a>
+    <a href="Recursos academicos.html">Recursos Académicos</a>
+    <a href="becas y beneficios.html">Becas y Beneficios</a>
+    <a href="Canal de denuncias.html">Canal de Denuncias</a>
+</nav>
+
+<main>
+    <h2>Presentación del CED-UNIR</h2>
+    <p>
+        UNIR no nace producto de una simple agenta electoral ni de consignas vacías. Es el grito de alerta de estudiantes de la carrera de Derecho, una respuesta a la dura realidad que enfrentamos día a día. 
+        Somos herederos de una carrera y una universidad que, en otro tiempo, iluminaron el país y el continente con ideas de transformación nacidas en sus aulas. Pero hoy, lo que alguna vez fue un bastión 
+        del pensamiento crítico y la excelencia académica, se desmorona ante nuestros ojos. Cada día que pasa, nos alejamos más de ese legado y nos sumimos en la inercia de lo que ya no es.
+    </p>
+
+    <h3>¿Quiénes somos?</h3>
+    <p>Somos más que un convencional y rústico frente estudiantil:
+        somos una corriente renovadora, con una visión crítica, ética y propositiva, que busca reformar estructuralmente su carrera y su Universidad. UNIR nace desde la indignación, pero camina con propuestas firmes.</p>
+
+    <h3>Misión</h3>
+    <p>UNIR tiene como misión primordial recuperar el rol histórico del estudiante de Charcas, en el entendido casi mítico de su pasado, hoy tan alejado de su presente. Con ello, nuestra tarea y compromiso es reacia a la vergüenza de la vieja dirigencia</p>
+
+    <h3>Compromiso</h3>
+    <p>Nos comprometemos a devolverles la esperanza que muchos creen muerta, pero que aún susurra débilmente, esperando ser escuchada. Sabemos que esperan una bandera a la cual seguir, y nosotros la alzamos con convicción, mientras haya estudiantes dispuestos a cambiar su realidad.</p>
+
+    <h2 style="text-align:center; color:#014421;">Nómina de Carteras</h2>
+    <table>
+        <tr>
+            <th>Cartera</th>
+            <th>Integrantes</th>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>1. Secretaría Ejecutiva</summary>
+                    <ul>
+                        <li>Gobernar y Representar a la Federación en cualquier acto oficial.</li>
+                        <li>Presidir las reuniones de la Asamblea General, el Consejo Estudiantil y la Directiva.</li>
+                        <li>Autorizar cualquier proyecto, actividad y programa de las demás Secretarías.</li>
+                        <li>Dirimir las votaciones en Asamblea, Consejo Estudiantil o Directiva en caso de empate.</li>
+                        <li>Ser delegado nato ante el Honorable Consejo Universitario.</li>
+                        <li>Ser delegado nato ante los Congresos Nacionales de Universidades y conferencias de Rectores y Dirigentes Universitarios.</li>
+                        <li>Ser delegado nato ante el Consejo Nacional de Dirigentes Universitarios y representar a la F.U.L. en los actos públicos y demás representaciones oficiales.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Sánchez Rodríguez Iván   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Canizares Moscoso Denilson Raúl</li><br>
+                <li>Barja Trujillo William</li><br>
+                <li>Cardozo Joel Edidtson</li><br>
+                <li>Antequera Romero Jhoel</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>2. Secretaría de Relaciones</summary>
+                    <ul>
+                        <li>Asumir las funciones de Secretario Ejecutivo provisional o definitivamente, en ausencia, impedimento legal o renunciar a este.</li>
+                        <li>Mantener las relaciones con todos aquellos organismos o entidades de la Federación y de la Universidad.</li>
+                        <li>Redactar la correspondencia de la F.U.L. Y expedir credenciales o certificados de la Directiva.</li>
+                        <li>Supervisar la labor de las Secretarías que componen la directiva y en su caso, pedir un informe de ellas para los efectos de responsabilidad y proceso Universitario.</li>
+                </details>
+            </td>
+            <td>
+                <li>Flores Terrazas Laynos Lenin   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Benítez Castro Emiliana</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>3. Secretaría Academica</summary>
+                    <ul>
+                        <li>Coordinar los asuntos académicos con los centros de estudiantes, implementar la política académica y de investigación aprobadas en el Congreso Nacional de Universidades.</li>
+                        <li>Coordinar con los organismos sindicales autárquicos etc. la integración de la Universidad con la problemática nacional y regional a partir de la tarea académica.</li>
+                        <li>Ser delegado nato a la Comisión Académica y velar por el cumplimiento de las resoluciones académicas que emanen de esta comisión.</li>
+                </details>
+            </td>
+            <td>
+                <li>Torrico Arroyo Enrique Alejandro   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Romero Veizaga Omar Said</li><br>
+                <li>Colque Soto Emmanuel Rudy</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>4. Secretaría Económica</summary>
+                    <ul>
+                        <li>Ser delegado nato a la comisión Administrativa y Financiera de la Universidad de San Francisco Xavier.</li>
+                        <li>Informar a las Asambleas, Consejo Estudiantil, Reunión de la Directiva y la Presupuestación de los diferentes rubros, resoluciones que se tomen respecto a las administraciones de la Universidad.</li>
+                        <li>Elemento de asesoramiento y apoyo al comité Ejecutivo en los eventos nacionales o departamentales donde la representación de la F.U.L. así lo requieran.</li>
+                        <li>Fiscalizar el movimiento económico de la Universidad Mayor Real y Pontificia de San Francisco Xavier.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Montiel Villalba Saida   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Martínez Carballo Javier </li><br>
+                <li>Acevedo Ampuero Natalia Nicol</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>5. Secretaría de Cultura</summary>
+                    <ul>
+                        <li>Fomentar e incrementar las actividades culturales en general que la F.U.L. impulsa y auspiciar actos, concursos y certámenes.</li>
+                        <li>Dirigir el orden periodístico de la F.U.L. y promover el uso de recursos con que cuenta la universidad para la comunicación de masas.</li>
+                        <li>Tramitar ante las autoridades competentes la rebaja permanente para los espectáculos públicos en general.</li>
+                    </ul>
+                </details> 
+            </td>
+            <td>
+                <li>Cruz Flores Adrián Mauricio   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Hinojosa González Elmer</li><br>
+                <li>Cabrera Mendieta Fabian</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>6. Secretaría de Organización</summary>
+                    <ul>
+                        <li>Cooperar al Secretario Ejecutivo y al de Relaciones en las tareas de organización y Dirección de Movimiento estudiantil.</li>
+                        <li>Asumir la responsabilidad ante la directiva sobre la información permanente de la organización de eventos departamentales Inter facultativos y Universitarios.</li>
+                        <li>Cooperar con todas las demás secretarías en las organizaciones de actividades que le sean concernientes a su cartera.</li>
+                        <li>Dirigir la organización de eventos de la F.U.L.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Flores Duran Ariana   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Nayeli Nicol Fernández Llave</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>7. Secretaría de Hacienda</summary>
+                    <ul>
+                        <li>Llevar la contabilidad de la F.U.L. detallada y actualizada.</li>
+                        <li>Recaudar y disponer de los fondos de las federaciones previa autorización del Secretario Ejecutivo.</li>
+                        <li>Llenar los libros de ingresos y egresos de la F.U.L. y presentarlos ante las Asambleas y Consejo Estudiantil periódicamente.</li>
+                        <li>Firmar como el Secretario Ejecutivo las órdenes de pago en favor de las secretarías que demandan gastos funcionales.</li>
+                        <li>Inventariar los bienes de la Federación y llevar las cuentas bancarias de la misma.</li>
+                        <li>Ser delegado suplente a la comisión Administrativa y Financiera.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Llanos Velázquez Anahí   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Nina Pacheco Cristian Emanuel</li>
+            </td>
+        </tr>
+        <tr>
+            <td>8. Secretaría de Interacción Universitaria</td>
+            <td>
+                <li>Acho Choque Omar Hilton   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>9. Secretaría de Bienestar Universitario y Estudiantil</summary>
+                    <ul>
+                        <li>Ser delegado ante el Consejo de Bienestar Estudiantil Universitario que propone, planifica, coordina y ejecuta políticas para velar por el interés de la F.U.L.</li>
+                        <li>Supervigilar la atención del Comedor Universitario y Residencia Universitaria y demandar otros servicios sociales para afiliados.</li>
+                        <li>Denunciar ante autoridades competentes la mala atención que pudieran recibir los universitarios en servicio pensión y alojamiento particular.</li>
+                        <li>Luchar por la atención médica, dental, farmacéutica y jurídica eficiente.</li>
+                        <li>Administrar los servicios de Comedor Universitario, Residencia Universitaria, Librería y otros servicios para miembros de la Federación.</li>
+                        <li>Velar por la atención bibliotecaria y de otros servicios universitarios en forma efectiva y permanente.</li>
+                        <li>Implementar la política racional y efectiva en la otorgación y distribución de todo tipo de becas.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Alcibia Zarate Rodrigo   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Gonzáles López Yendi Jaqueline</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>10. Secretaría de Prensa y Propaganda</summary>
+                    <ul>
+                        <li>Publicar programas y proyectos de la Federación y dar informaciones de la actividad Universitaria.</li>
+                        <li>Cooperar con el funcionamiento de un órgano periodístico de la F.U.L. conjuntamente con el Secretario de Cultura.</li>
+                        <li>Encargarse de todas las publicaciones de la F.U.L. a través de sus distintos órganos.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Medina Ortiz Eduard Manuel   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>11. Secretaría de Conflictos</summary>
+                    <ul>
+                        <li>Representar y defender a la F.U.L. o a sus miembros en la resolución de problemas de orden interno.</li>
+                        <li>Encarar la defensa de los compañeros universitarios que requieran, evitando que se produzca abusos contra ellos.</li>
+                        <li>Coordinar las distintas movilizaciones encargándose de los preparativos para efectivizar las medidas de presión.</li>
+                        <li>Coordinar con los comités de huelga y de la F.U.L. las actividades y acciones a tomarse.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Castañón Beltrán Carlos Alberto   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                <summary>12. Secretaría de Deportes y Festejos</summary>
+                <ul>
+                    <li>Ser delegado al Departamento de Deporte para planificar e impulsar los diferentes planes de actividades deportivas universitarias.</li>
+                    <li>Preparar la presentación de Universitaria para competencias nacionales e internacionales a las que fuera invitada.</li>
+                    <li>Auspiciar y organizar, por lo menos un campeonato Universitario Olímpico anual a nivel local.</li>
+                    <li>Ser delegado titular del directorio del club Universitario.</li>
+                </ul>
+            </details>
+            </td>
+            <td>
+                <li>Oña Quiroga Laura Daniela   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Garabito Flores Luis Marcelo</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                <summary>13. Secretaría de Transporte y Vivienda</summary>
+                <ul>
+                    <li>Defender los derechos de los estudiantes al transporte.</li>
+                    <li>Coordinar la rebaja del precio de transporte y vivienda para los estudiantes universitarios.</li>
+                </ul>
+            </details>
+            </td>
+            <td>
+                <li>Barragán Morales Mauricio Abdel   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>14. Secretaría de Vinculación Campesina</summary>
+                    <ul>
+                        <li>Mantener relaciones a nombre de la F.U.L. con la Federación Sindical única de Trabajadores Campesinos de Chuquisaca FSUTCCH y con otras entidades relacionadas con el sector.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <!-- Vacío -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>15. Delegado al Honorable Consejo Universitario</summary>
+                    <ul>
+                        <li>Representar el sector estudiantil con voz y voto.</li>
+                    </ul>
+                </details>
+                
+            </td>
+            <td>
+                <li>Saldías Ávalos Jhon Fred   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>16. Delegado a la Central Obrera Departamental</summary>
+                    <ul>
+                        <li>Vincular y representar a la F.U.L con todo lo que se refiere al movimiento popular organizado.</li>
+                    </ul>
+                </details>
+            </td>
+            <td>
+                <li>Machado Maturano Policarpio   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                    <summary>17. Delegado a CODEINCA</summary>
+                    <ul>
+                        <li>Vincular y representar a la F.U.L. con todo lo que se refiere a los intereses del Departamento.</li>
+                    </ul>
+                </details>
+                
+            </td>
+            <td>
+                <li>Davalos Villalpando Alia Fernanda   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                <summary>18. Delegado a la A.P.D.H.</summary>
+                <ul>
+                    <li>Vincular y representar a la F.U.L. con la asamblea de derechos humanos e interceder por los compañeros detenidos en momentos de represión.</li>
+                </ul>
+                </details></td>
+            <td>
+                <li>Nava Mamani Jorge Andrés   <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <details>
+                <summary>19. Vocales</summary>
+                <ul>
+                    <li>Colaborar a cualquiera de los secretarios de la directiva, con responsabilidad similar a la del titular.</li>
+                </ul>
+                </details>
+            </td>
+            <td>
+                <li>Oña Quiroga Alejandro Saul  <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a></li><br>
+                <li>Ortega Baptista Angela Belen</li>
+            </td>
+        </tr>
+    </table>
+</main>
+
+<footer>
+    <p style="text-align: center;">Síguenos en nuestras redes sociales</p>
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/@unir_derecho_usfx?_t=ZM-8yimf7SNzJF&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AhHMANKfr/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/c.e.d_unir?igsh=MXVucjd4Z2ZuMmdlYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="text-align: center;">&copy; 2025 CED UNIR - Facultad de Derecho USFX | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

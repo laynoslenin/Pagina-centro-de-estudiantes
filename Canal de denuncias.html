@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canal de Denuncias - CED UNIR Derecho USFX</title>
+
+<!-- Iconos (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    /* Encabezado */
+    header {
+        background-color: #004d26;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    header img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    /* Barra de navegación */
+    nav {
+        background-color: #389c40; /* verde claro */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #2e8b57; /* Verde más claro */
+    }
+    /* Contenido principal */
+    main {
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Pie de página */
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #2e8b57;
+    }
+    
+    /* Estilos específicos para denuncias */
+    .seccion {
+        margin-bottom: 40px;
+    }
+    .alert-box {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+    }
+    .alert-box h3 {
+        margin-top: 0;
+        color: #856404;
+    }
+    .sabias-que {
+        background-color: #e7f5ff;
+        border-left: 4px solid #004d26;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+    }
+    .sabias-que h3 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .sabias-que-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .sabias-item {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .sabias-item h4 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .documentos-utiles {
+        margin-top: 30px;
+    }
+    .documento-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    .documento-item:last-child {
+        border-bottom: none;
+    }
+    .btn-descargar {
+        background-color: #004d26;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background 0.3s;
+    }
+    .btn-descargar:hover {
+        background-color: #2e8b57;
+    }
+    .form-denuncia {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .form-denuncia h3 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .form-group textarea {
+        height: 150px;
+        resize: vertical;
+    }
+    .btn-submit {
+        background-color: #004d26;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s;
+    }
+    .btn-submit:hover {
+        background-color: #2e8b57;
+    }
+    .modelos-cartas {
+        margin-top: 40px;
+    }
+    .modelo-item {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .modelo-item h4 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .consejos {
+        margin-top: 30px;
+    }
+    .consejo-item {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        border-left: 3px solid #004d26;
+    }
+    .consejo-item h4 {
+        margin-top: 0;
+        color: #004d26;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpeg" alt="Logo CED UNIR">
+    <div>
+        <h1>Centro de Estudiantes de Derecho - UNIR</h1>
+        <p>Universitarios con Nuevas Ideas de Reforma</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Nuestro centro.html">Nuestro Centro</a>
+    <a href="Normas y reglamentos.html">Normas y Reglamentos</a>
+    <a href="Noticias y avisos.html">Noticias y Avisos</a>
+    <a href="Horarios y atenciones.html">Horarios y Atenciones</a>
+    <a href="Recursos academicos.html">Recursos Académicos</a>
+    <a href="becas y beneficios.html">Becas y Beneficios</a>
+    <a href="Canal de denuncias.html">Canal de Denuncias</a>
+</nav>
+
+<main>
+    <h2>Canal de Denuncias</h2>
+    
+    <div class="alert-box">
+        <h3><i class="fas fa-exclamation-triangle"></i> Importante</h3>
+        <p>Este canal es confidencial y seguro. Todas las denuncias serán tratadas con la mayor seriedad y discreción por el Centro de Estudiantes.</p>
+    </div>
+    
+    <div class="seccion">
+        <h3>¿Sabías que...?</h3>
+        <p>Conoce tus derechos como estudiante universitario:</p>
+        
+        <div class="sabias-que-grid">
+            <div class="sabias-item">
+                <h4>Exámenes en la misma fecha</h4>
+                <p>No te pueden imponer rendir dos exámenes parciales el mismo día. Así lo establece el <strong>Artículo 49 del Reglamento del regimen academico estudiantil del sistema de la universidad boliviana</strong>.</p>
+                <a href="documentos/reglamento_examenes.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Reglamento
+                </a>
+            </div>
+            
+            <div class="sabias-item">
+                <h4>Revisión de exámenes</h4>
+                <p>Tienes derecho a solicitar revisión de tus exámenes si no estás de acuerdo con la calificación, según el <strong>Artículo 57 del Reglamento del regimen academico estudiantil del sistema de la universidad boliviana</strong>.</p>
+                <a href="documentos/reglamento_academico.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Reglamento
+                </a>
+            </div>
+            
+            <div class="sabias-item">
+                <h4>Derecho a conocer tu note en tiempo oportuno</h4>
+                <p>El docente debe darte a conocer los resultados de los examenes en un plazo no mayor a 7 dias, asi lo establece el<strong>Artículo 106 inc. V del estatuto organico de la universidad</strong>.</p>
+                <a href="documentos/reglamento_evaluacion.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Estatuto
+                </a>
+            </div>
+            
+            <div class="sabias-item">
+                <h4>La asistencia es libre</h4>
+                <p>La asistencia es libre mientras el H. concejo universitario no determine lo contrario, asi lo establece el<strong>Articulo 115 del estatuto organico de la universidad</strong>.</p>
+                <a href="documentos/reglamento_academico.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Estatuto
+                </a>
+            </div>
+            
+            <div class="sabias-item">
+                <h4>Horarios de clases</h4>
+                <p>Las clases no pueden extenderse más allá del horario establecido sin consentimiento de los estudiantes, según el <strong>Regimen de asistencia docente</strong>.</p>
+                <a href="documentos/reglamento_horarios.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Reglamento
+                </a>
+            </div>
+            
+            <div class="sabias-item">
+                <h4>Trato digno</h4>
+                <p>Tienes derecho a un trato digno y respetuoso por parte de docentes y administrativos, según el <strong>Art 119 del estatuto organico de la universidad</strong>.</p>
+                <a href="documentos/codigo_etica.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Ver Estatuto
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <h3>Documentos Útiles</h3>
+        <p>Reglamentos y normativas que protegen tus derechos:</p>
+        
+        <div class="documentos-utiles">
+            <div class="documento-item">
+                <div>
+                    <h4>Reglamento del regimen academico estudiantil del sistema de la universidad boliviana</h4>
+                    <p>Documento completo con todos los derechos y obligaciones de los estudiantes.</p>
+                </div>
+                <a href="documentos/reglamento_academico.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar
+                </a>
+            </div>
+            
+            <div class="documento-item">
+                <div>
+                    <h4>Reglamento de Evaluación</h4>
+                    <p>Normas sobre exámenes, calificaciones y procesos de evaluación.</p>
+                </div>
+                <a href="documentos/reglamento_evaluacion.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar
+                </a>
+            </div>
+            
+            <div class="documento-item">
+                <div>
+                    <h4>Reglamento del tribunal de examenes</h4>
+                    <p>Normas para la conformacion de un tribunal de examenes y formas de solicitud.</p>
+                </div>
+                <a href="documentos/codigo_etica.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar
+                </a>
+            </div>
+            
+            <div class="documento-item">
+                <div>
+                    <h4>Revision de examenes y modificacion de calificaciones</h4>
+                    <p>Procedimientos para pedir la modificacion de calificaciones</p>
+                </div>
+                <a href="documentos/protocolo_acoso.pdf" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <h3>Modelos de Cartas</h3>
+        <p>Descarga y adapta estos modelos para hacer valer tus derechos:</p>
+        
+        <div class="modelos-cartas">
+            <div class="modelo-item">
+                <h4>Solicitud de revisión de examen</h4>
+                <p>Modelo para solicitar la revisión de un examen cuando no estás de acuerdo con la calificación.</p>
+                <a href="documentos/modelo_revision_examen.docx" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar Modelo
+                </a>
+            </div>
+            
+            <div class="modelo-item">
+                <h4>Reclamo por cambio de fecha de examen</h4>
+                <p>Modelo para presentar cuando te programan dos exámenes el mismo día.</p>
+                <a href="documentos/modelo_reclamo_fechas.docx" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar Modelo
+                </a>
+            </div>
+            
+            <div class="modelo-item">
+                <h4>Denuncia por trato indigno</h4>
+                <p>Modelo para denunciar situaciones de maltrato o falta de respeto.</p>
+                <a href="documentos/modelo_denuncia_trato.docx" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar Modelo
+                </a>
+            </div>
+            
+            <div class="modelo-item">
+                <h4>Solicitud de copia de examen</h4>
+                <p>Modelo para solicitar una copia de tu examen calificado.</p>
+                <a href="documentos/modelo_solicitud_copia.docx" class="btn-descargar" download>
+                    <i class="fas fa-download"></i> Descargar Modelo
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <h3>Consejos para Presentar una Denuncia</h3>
+        
+        <div class="consejos">
+            <div class="consejo-item">
+                <h4>1. Documenta todo</h4>
+                <p>Guarda correos, mensajes, fotos de horarios, exámenes o cualquier evidencia que respalde tu denuncia.</p>
+            </div>
+            
+            <div class="consejo-item">
+                <h4>2. Cita los reglamentos</h4>
+                <p>Menciona específicamente qué artículos del reglamento se están incumpliendo.</p>
+            </div>
+            
+            <div class="consejo-item">
+                <h4>3. Sé claro y conciso</h4>
+                <p>Describe los hechos de manera objetiva, con fechas y nombres de personas involucradas.</p>
+            </div>
+            
+            <div class="consejo-item">
+                <h4>4. Presenta copias</h4>
+                <p>Cuando entregues una denuncia formal, guarda siempre una copia con sello de recibido.</p>
+            </div>
+            
+            <div class="consejo-item">
+                <h4>5. Sigue el conducto regular</h4>
+                <p>Primero al docente, luego a la dirección de carrera, después a decanato si no hay solución.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <div class="form-denuncia">
+            <h3><i class="fas fa-edit"></i> Formulario de Denuncia</h3>
+            <p>Si has sido víctima de alguna irregularidad, completa este formulario y el CED te acompañará en el proceso.</p>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="tipo-denuncia">Tipo de denuncia*</label>
+                    <select id="tipo-denuncia" name="tipo-denuncia" required>
+                        <option value="">Seleccione...</option>
+                        <option value="academica">Irregularidad académica</option>
+                        <option value="horarios">Problema con horarios</option>
+                        <option value="evaluacion">Problema con evaluaciones</option>
+                        <option value="trato">Maltrato o trato indigno</option>
+                        <option value="acoso">Acoso o discriminación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descripcion">Descripción detallada*</label>
+                    <textarea id="descripcion" name="descripcion" required placeholder="Describe qué sucedió, cuándo, quiénes estuvieron involucrados y qué artículos del reglamento consideras que se han violado..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="evidencia">Evidencia (opcional)</label>
+                    <input type="file" id="evidencia" name="evidencia" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                    <small>Puedes subir fotos, documentos o capturas de pantalla que respalden tu denuncia (máx. 5MB)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre">Tu nombre*</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="confidencialidad" required> 
+                        Entiendo que esta información será tratada con confidencialidad y solo será usada para dar seguimiento a mi caso.
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Denuncia
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Síguenos en nuestras redes sociales</p>
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/@unir_derecho_usfx?_t=ZM-8yimf7SNzJF&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AhHMANKfr/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/c.e.d_unir?igsh=MXVucjd4Z2ZuMmdlYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 CED UNIR - Facultad de Derecho USFX | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horarios y Atenciones - CED UNIR Derecho USFX</title>
+
+<!-- Iconos (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    /* Encabezado */
+    header {
+        background-color: #004d26;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    header img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    /* Barra de navegación */
+    nav {
+        background-color: #389c40; /* verde claro */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        transition: background 0.3s;
+    }
+    nav a:hover {
+        background-color: #2e8b57; /* Verde más claro */
+    }
+    /* Contenido principal */
+    main {
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    /* Pie de página */
+    footer {
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #2e8b57;
+    }
+    
+    /* Estilos específicos para horarios */
+    .seccion {
+        margin-bottom: 40px;
+    }
+    .horario-atencion {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #004d26;
+        margin-bottom: 30px;
+    }
+    .horario-atencion h3 {
+        margin-top: 0;
+        color: #004d26;
+    }
+    .horario-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .horario-icon {
+        font-size: 1.5rem;
+        color: #004d26;
+        min-width: 30px;
+    }
+    .horario-info h4 {
+        margin: 0 0 5px 0;
+    }
+    .horario-info p {
+        margin: 0;
+        color: #666;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    th {
+        background-color: #004d26;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .aviso-horarios {
+        background-color: #fff8e1;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #ffc107;
+    }
+    .pestanas {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+    .pestana {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        margin-right: 5px;
+        background-color: #f1f1f1;
+    }
+    .pestana.activa {
+        background-color: white;
+        border-color: #ddd;
+        border-bottom: 1px solid white;
+        margin-bottom: -1px;
+        font-weight: bold;
+        color: #004d26;
+    }
+    .contenido-pestana {
+        display: none;
+    }
+    .contenido-pestana.activo {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpeg" alt="Logo CED UNIR">
+    <div>
+        <h1>Centro de Estudiantes de Derecho - UNIR</h1>
+        <p>Universitarios con Nuevas Ideas de Reforma</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="Nuestro centro.html">Nuestro Centro</a>
+    <a href="Normas y reglamentos.html">Normas y Reglamentos</a>
+    <a href="Noticias y avisos.html">Noticias y Avisos</a>
+    <a href="Horarios y atenciones.html">Horarios y Atenciones</a>
+    <a href="Recursos academicos.html">Recursos Académicos</a>
+    <a href="becas y beneficios.html">Becas y Beneficios</a>
+    <a href="Canal de denuncias.html">Canal de Denuncias</a>
+</nav>
+
+<main>
+    <h2>Horarios y Atenciones</h2>
+    
+    <div class="seccion">
+        <div class="horario-atencion">
+            <h3><i class="far fa-clock"></i> Horario de Atención del CED</h3>
+            
+            <div class="horario-box">
+                <div class="horario-icon">
+                    <i class="fas fa-door-open"></i>
+                </div>
+                <div class="horario-info">
+                    <h4>Horario Continuo</h4>
+                    <p>Lunes a Viernes: 7:00 - 13:00 y 14:00 - 20:00</p>
+                    <p>Sábados: 8:00 - 12:00 (solo para trámites urgentes)</p>
+                </div>
+            </div>
+            
+            <div class="horario-box">
+                <div class="horario-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="horario-info">
+                    <h4>Atención de Secretarías</h4>
+                    <p>Cada secretaría tiene horarios específicos de atención al público</p>
+                </div>
+            </div>
+            
+            <div class="horario-box">
+                <div class="horario-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="horario-info">
+                    <h4>Atención Urgente</h4>
+                    <p>Para casos urgentes fuera de horario, contactar al celular de guardia: 591 XXXXXXXX</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="aviso-horarios">
+            <h4><i class="fas fa-info-circle"></i> Importante</h4>
+            <p>Los horarios pueden sufrir modificaciones durante periodos de exámenes o feriados universitarios. Se recomienda verificar en nuestras redes sociales cualquier cambio.</p>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <h3>Horarios de Cursos por Año</h3>
+        
+        <div class="pestanas">
+            <div class="pestana activa" onclick="cambiarPestana(event, 'primero')">1er Año</div>
+            <div class="pestana" onclick="cambiarPestana(event, 'segundo')">2do Año</div>
+            <div class="pestana" onclick="cambiarPestana(event, 'tercero')">3er Año</div>
+            <div class="pestana" onclick="cambiarPestana(event, 'cuarto')">4to Año</div>
+            <div class="pestana" onclick="cambiarPestana(event, 'quinto')">5to Año</div>
+        </div>
+        
+        <div id="primero" class="contenido-pestana activo">
+            <p>Próximamente publicaremos los horarios para primer año. Estamos trabajando en coordinación con la facultad para definir los mejores horarios.</p>
+            <p><strong>Materias tentativas:</strong> Introducción al Derecho, Derecho Romano, Sociología Jurídica, Economía Política, Historia del Derecho.</p>
+        </div>
+        
+        <div id="segundo" class="contenido-pestana">
+            <p>Próximamente publicaremos los horarios para segundo año.</p>
+            <p><strong>Materias tentativas:</strong> Derecho Civil I, Derecho Constitucional, Derecho Penal I, Teoría del Estado, Filosofía del Derecho.</p>
+        </div>
+        
+        <div id="tercero" class="contenido-pestana">
+            <p>Próximamente publicaremos los horarios para tercer año.</p>
+            <p><strong>Materias tentativas:</strong> Derecho Civil II, Derecho Penal II, Derecho Procesal Civil, Derecho Administrativo, Derecho Internacional Público.</p>
+        </div>
+        
+        <div id="cuarto" class="contenido-pestana">
+            <p>Próximamente publicaremos los horarios para cuarto año.</p>
+            <p><strong>Materias tentativas:</strong> Derecho Civil III, Derecho Procesal Penal, Derecho Laboral, Derecho Tributario, Derecho Internacional Privado.</p>
+        </div>
+        
+        <div id="quinto" class="contenido-pestana">
+            <p>Próximamente publicaremos los horarios para quinto año.</p>
+            <p><strong>Materias tentativas:</strong> Derecho Civil IV, Derecho Comercial, Derecho Minero, Derecho Agrario, Práctica Jurídica.</p>
+        </div>
+    </div>
+    
+    <div class="seccion">
+        <h3>Horario de Atención por Secretarías</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Secretaría</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Secretaría General</td>
+                    <td>9:00-12:00<br>15:00-18:00</td>
+                    <td>9:00-12:00<br>15:00-18:00</td>
+                    <td>9:00-12:00</td>
+                    <td>9:00-12:00<br>15:00-18:00</td>
+                    <td>9:00-12:00</td>
+                </tr>
+                <tr>
+                    <td>Secretaría Académica</td>
+                    <td>8:00-11:00<br>16:00-19:00</td>
+                    <td>8:00-11:00</td>
+                    <td>8:00-11:00<br>16:00-19:00</td>
+                    <td>8:00-11:00</td>
+                    <td>8:00-11:00<br>16:00-19:00</td>
+                </tr>
+                <tr>
+                    <td>Secretaría de Bienestar</td>
+                    <td>10:00-13:00<br>14:00-17:00</td>
+                    <td>10:00-13:00<br>14:00-17:00</td>
+                    <td>10:00-13:00</td>
+                    <td>10:00-13:00<br>14:00-17:00</td>
+                    <td>10:00-13:00</td>
+                </tr>
+                <tr>
+                    <td>Secretaría de Cultura</td>
+                    <td>14:00-17:00</td>
+                    <td>14:00-17:00</td>
+                    <td>14:00-17:00</td>
+                    <td>14:00-17:00</td>
+                    <td>14:00-17:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>Síguenos en nuestras redes sociales</p>
+    <div class="social-icons">
+        <a href="https://www.tiktok.com/@unir_derecho_usfx?_t=ZM-8yimf7SNzJF&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1AhHMANKfr/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/c.e.d_unir?igsh=MXVucjd4Z2ZuMmdlYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2025 CED UNIR - Facultad de Derecho USFX | Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function cambiarPestana(event, pestanaId) {
+        // Ocultar todos los contenidos de pestañas
+        document.querySelectorAll('.contenido-pestana').forEach(function(contenido) {
+            contenido.classList.remove('activo');
+        });
+        
+        // Mostrar el contenido de la pestaña seleccionada
+        document.getElementById(pestanaId).classList.add('activo');
+        
+        // Quitar clase 'activa' de todas las pestañas
+        document.querySelectorAll('.pestana').forEach(function(pestana) {
+            pestana.classList.remove('activa');
+        });
+        
+        // Agregar clase 'activa' a la pestaña clickeada
+        event.currentTarget.classList.add('activa');
+    }
+</script>
+
+</body>
+</html>
